@@ -14,7 +14,7 @@ autonumber
 ' declare actors
 collections "Position-Topic-dfsp1" as TOPIC_POSITION_DFSP1
 control "Position Event Handler" as POS_HANDLER
-collections "Transfer-Topic" as TOPIC_NOTIFICATIONS
+collections "Notifications-Topic" as TOPIC_NOTIFICATIONS
 collections "Event-Topic" as TOPIC_EVENT
 entity "Transfer DAO" as TRANS_DAO
 entity "Position DAO" as POS_DAO
