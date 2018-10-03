@@ -14,7 +14,6 @@ autonumber
 ' declare actors
 collections "Position-Topic-dfsp1" as TOPIC_POSITION_DFSP1
 control "Position Event Handler" as POS_HANDLER
-collections "Transfer-Topic" as TOPIC_TRANSFERS
 entity "Position DAO" as POS_DAO
 entity "Event-Topic" as TOPIC_EVENTS
 collections "Notification-Topic" as TOPIC_NOTIFICATIONS
@@ -24,7 +23,6 @@ database "Central Store" as DB
 box "Central Service" #LightYellow
     participant TOPIC_POSITION_DFSP1
     participant POS_HANDLER
-    participant TOPIC_TRANSFERS
     participant TOPIC_EVENTS
     participant TOPIC_NOTIFICATIONS
     participant POS_DAO
@@ -61,7 +59,7 @@ group Position Handler Consume
 
             POS_HANDLER <-> POS_HANDLER: Calculate latest position (lpos) by incrementing transfer for prepare
             POS_HANDLER <-> POS_HANDLER: Validate Calculated latest position against the net-debit cap (netcap) - Rule: lpos < netcap
-            
+
             POS_HANDLER -> POS_DAO: Request to persist latest position for Payer
             activate POS_DAO
             POS_DAO -> DB: Persist latest position to DB for Payer
@@ -111,9 +109,9 @@ group Position Handler Consume
                 }
             }
         end note
-        POS_HANDLER -> TOPIC_TRANSFERS: Publish Transfer event
-        activate TOPIC_TRANSFERS
-        deactivate TOPIC_TRANSFERS
+        POS_HANDLER -> TOPIC_NOTIFICATIONS: Publish Notification event
+        activate TOPIC_NOTIFICATIONS
+        deactivate TOPIC_NOTIFICATIONS
     end
 end
 deactivate POS_HANDLER

@@ -14,7 +14,7 @@ autonumber
 ' declare actors
 collections "Position-Topic-dfsp1" as TOPIC_POSITION_DFSP1
 control "Position Event Handler" as POS_HANDLER
-collections "Transfer-Topic" as TOPIC_TRANSFERS
+collections "Transfer-Topic" as TOPIC_NOTIFICATIONS
 collections "Event-Topic" as TOPIC_EVENT
 entity "Transfer DAO" as TRANS_DAO
 entity "Position DAO" as POS_DAO
@@ -24,7 +24,7 @@ box "Central Service" #LightYellow
     participant TOPIC_POSITION_DFSP1
     participant TOPIC_EVENT
     participant POS_HANDLER
-    participant TOPIC_TRANSFERS
+    participant TOPIC_NOTIFICATIONS
     participant TRANS_DAO
     participant POS_DAO
     participant DB
@@ -46,7 +46,7 @@ group Position Handler Consume (Reject)
 
         group Persist Event Information
             POS_HANDLER -> TOPIC_EVENT: Publish event information
-	        ref over POS_HANDLER, TOPIC_EVENT :  Event Handler Consume {[[https://github.com/mojaloop/docs/blob/develop/CentralServices/seq_diagrams/seq-event-9.1.0.svg 9.1.0.]]} 
+	        ref over POS_HANDLER, TOPIC_EVENT :  Event Handler Consume {[[https://github.com/mojaloop/docs/blob/develop/CentralServices/seq_diagrams/seq-event-9.1.0.svg 9.1.0.]]}
         end
 
         group Retrieve Current Transfer Details
@@ -96,7 +96,7 @@ group Position Handler Consume (Reject)
             TRANS_DAO --> POS_HANDLER: Return success
             deactivate TRANS_DAO
         end
-    
+
         note right of POS_HANDLER #yellow
             Message:
             {
@@ -123,9 +123,9 @@ group Position Handler Consume (Reject)
                 }
             }
         end note
-        POS_HANDLER -> TOPIC_TRANSFERS: Publish Transfer event
-        activate TOPIC_TRANSFERS
-        deactivate TOPIC_TRANSFERS
+        POS_HANDLER -> TOPIC_NOTIFICATIONS: Publish Notification event
+        activate TOPIC_NOTIFICATIONS
+        deactivate TOPIC_NOTIFICATIONS
 
     else Consume Batch Messages
         note left of POS_HANDLER #lightblue

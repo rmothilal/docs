@@ -13,14 +13,14 @@ autonumber
 
 ' declare actors
 control "Position Handler" as POS_HANDLER
-collections "Transfer-Topic" as TOPIC_TRANSFERS
+collections "Notification-Topic" as TOPIC_NOTIFICATION
 entity "Position Facade" as POS_FACADE
 entity "Transfer DAO" as TRANS_DAO
 database "Central Store" as DB
 
 box "Central Service" #LightYellow
     participant POS_HANDLER
-    participant TOPIC_TRANSFERS
+    participant TOPIC_NOTIFICATION
     participant TRANS_DAO
     participant POS_FACADE
     participant DB
@@ -106,9 +106,9 @@ group Fulfil Position Handler Consume
             }
         }
     end note
-    POS_HANDLER -> TOPIC_TRANSFERS: Publish Transfer event\n<color #FF0000><b>Error code:</b> 2003</color>
-    activate TOPIC_TRANSFERS
-    deactivate TOPIC_TRANSFERS
+    POS_HANDLER -> TOPIC_NOTIFICATION: Publish Transfer event\n<color #FF0000><b>Error code:</b> 2003</color>
+    activate TOPIC_NOTIFICATION
+    deactivate TOPIC_NOTIFICATION
 end
 deactivate POS_HANDLER
 @enduml
