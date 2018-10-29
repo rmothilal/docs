@@ -14,6 +14,7 @@ cp docs/DFSP/ManageAcccoutHolders/*.jpg ./images
 cp "docs/DFSP/GSMA MM & L1P DFSP API"/*.jpg ./images
 cp docs/CentralDirectory/*.png ./images
 cp docs/CentralLedger/*.png ./images
+cp central-ledger/images/*.png ./images 
 cp docs/CentralRules/*.png ./images
 cp "docs/Interop Services and Mule"/*.png ./images
 cp "docs/Interop Services and Mule"/*.jpg ./images
