@@ -280,8 +280,15 @@ pages:
         targets:
             - all
 
+    -   name: 'Design Decisions'
+        html: Design-Decisions.html
+        category: Appendix
+        md: mojaloop/contribute/Decision-Items.md
+        targets:
+            - all
+
     -   name: 'Tools and Process Decisions'
-        html: Decisions.html
+        html: Tools-Decisions.html
         category: Appendix
         md: docs/decisions.md
         targets:
@@ -291,6 +298,13 @@ pages:
         html: FAQ.html
         category: Appendix
         md: mojaloop/FAQ.md
+        targets:
+            - all
+
+    -   name: 'User Story Workflow'
+        html: user-story-workflow.html
+        category: Appendix
+        md: mojaloop/contribute/Pipeline.md
         targets:
             - all
 

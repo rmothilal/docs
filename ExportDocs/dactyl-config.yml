@@ -270,6 +270,12 @@ pages:
         targets:
             - all
 
+    -   name: 'Running Central Ledger on Kubernetes'
+        html: central_ledger_On_Kubernetes.html
+        category: 'Central Ledger'
+        md: central-ledger/KUBERNETES.md
+        targets:
+            - all
 
 #docs/CentralRules
 # README.md central_rules_endpoints.md
