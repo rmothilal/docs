@@ -1,4 +1,10 @@
-# Overview
+# DFSP Overview
+
+> ***OUT OF DATE STARTS HERE***
+
+The DFSP code and documentation are not currently maintained and are out of date.
+
+> ***OUT OF DATE ENDS HERE***
 
 ## Contents
 

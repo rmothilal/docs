@@ -112,38 +112,37 @@ pages:
             - all
             - contributor
 
-# scenarios
     -   name: 'Scenario Descriptions'
         html: Scenarios.html
-        category: Scenarios
+        category: Overview
         md: docs/scenarios.md
         section_header: true
         targets:
             - all
             - stakeholder
 
-    -   name: 'Pending Transfers'
-        html: Invoices.html
-        category: Scenarios
-        md: docs/DFSP/PendingTransactions/README.md
-        targets:
-            - all
-            - stakeholder
+    # -   name: 'Pending Transfers'
+    #     html: Invoices.html
+    #     category: Scenarios
+    #     md: docs/DFSP/PendingTransactions/README.md
+    #     targets:
+    #         - all
+    #         - stakeholder
 
-    -   name: 'Pending Transfers API'
-        html: TransferAPI.html
-        category: Scenarios
-        md: docs/DFSP/Pending Transactions Api/README.md
-        targets:
-            - all
+    # -   name: 'Pending Transfers API'
+    #     html: TransferAPI.html
+    #     category: Scenarios
+    #     md: docs/DFSP/Pending Transactions Api/README.md
+    #     targets:
+    #         - all
 
-    -   name: 'Bulk Payments'
-        html: BulkPayments.html
-        category: Scenarios
-        md: 'docs/DFSP/BulkPayment/README.md'
-        targets:
-            - all
-            - stakeholder
+    # -   name: 'Bulk Payments'
+    #     html: BulkPayments.html
+    #     category: Scenarios
+    #     md: 'docs/DFSP/BulkPayment/README.md'
+    #     targets:
+    #         - all
+    #         - stakeholder
 
 # docs/LevelOneClient
     -   name: 'Interledger Components and Flow'
@@ -169,12 +168,20 @@ pages:
         targets:
             - all
 
-    -   name: 'Interop Ledger'
-        html: interop-ilp-ledger.html
+    # -   name: 'Interop Ledger'
+    #     html: interop-ilp-ledger.html
+    #     category: 'Level One Client'
+    #     md: interop-ilp-ledger/README.md
+    #     targets:
+    #         - all
+
+    -   name: 'Mojaloop API Adapter'
+        html: ml-api-adapter-api.html
         category: 'Level One Client'
-        md: interop-ilp-ledger/README.md
+        md: ml-api-adapter/API.md
         targets:
             - all
+
 
 
 #docs/CentralDirectory

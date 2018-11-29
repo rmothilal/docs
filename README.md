@@ -41,10 +41,15 @@ This document is a work in progress; not all sections are updated to the latest 
 
 Any text in this area is considered "out of date." It may reflect earlier versions of the technology, outdated terminology use, or sections that are poorly phrased and edited.
 
+> ***OUT OF DATE ENDS HERE***
+
 ### DFSP Service
 The DFSP code is an example implementation of a mobile money provider. Customers connect to it from their mobile feature phones using Unstructured Supplementary Service Data (USSD). USSD is a Global System for Mobile (GSM) communication technology that is used to send text between a mobile phone and an application program in the network, allowing users to create accounts, send money, and receive money.
+> ***OUT OF DATE STARTS HERE***
+> 
+The DFSP code is not currently maintained and is out of date
 
-[DFSP Documentation](./DFSP)
+> ***OUT OF DATE ENDS HERE***
 
 ### Central Services
 The central services are a collection of separate services that help the DFSPs perform operations on the network.

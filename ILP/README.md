@@ -1,6 +1,6 @@
 # Interledger for Mojaloop
 
-The Interledger project is a suite of protocol definitions and reference implementations that define a standard way to connect any number of disparate payment systems together into one interconnected network: an _internet of value_. Mojaloop uses Interledger as its settlement layer so that individual instances or deployments of Mojaloop software can eventually become interconnected not just with one another, but with all other payment systems worldwide. Interledger development is spearheaded by Ripple, with support from the W3C and various other stakeholders.
+The Interledger project is a suite of protocol definitions and reference implementations that define a standard way to connect any number of disparate payment systems together into one interconnected network: an _internet of value_. Mojaloop uses Interledger as its clearing layer so that individual instances or deployments of Mojaloop software can eventually become interconnected not just with one another, but with all other payment systems worldwide. Interledger development is an open source effort spearheaded by Ripple, with support from the W3C and various other stakeholders.
 
 ![Interconnectivity Animation](./interconnectivity-animation.gif)
 
@@ -230,7 +230,7 @@ In the case of a Mojaloop instance, some more specific modifications are possibl
 ## How to Troubleshoot ILP Payment Issues
 
 - Consult the logs.
-- See which transfers executed and which transfer oe transfers failed.
+- See which transfers executed and which transfer or transfers failed.
 
 
 ## Software Components
