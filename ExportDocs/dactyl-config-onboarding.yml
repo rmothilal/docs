@@ -108,11 +108,11 @@ pages:
         targets:
             - all
 
-# local test environment
+#local test environment
     -   name: 'Creating a local test environment'
-        html: devops.html
+        html: helm.html
         category: Local Test Envirnment
-        md: interop-devops/README.md
+        md: helm/README.md
         section_header: true
         targets:
             - all
