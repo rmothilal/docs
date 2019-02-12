@@ -6,10 +6,16 @@ The purpose of this document is to provide;
 - the hierarchy of values.
 
 #### Helm Chart Ocerview
-![Mojaloop Helm Chart Overview](../../Wiki/Mojaloop Helm Chart Overview.png)
+Helm chart Repo: http://mojaloop.io/helm/repo <- Helm repo to be added to config
+Helm Github: http://github.com/mojaloop/helm  <- Location for source and values.yaml(configs)
+
+![Mojaloop Helm - Chart Overview](../../Wiki/HelmChartOverview.png)
+[Mojaloop Helm - Chart Overview](../../Wiki/HelmChartOverview.png)
 
 #### Helm Hierarchy Relationship
-![Mojaloop Hierarchy Relationship](../../Wiki/Mojaloop Hierarchy Relationship.png)
+![Mojaloop Helm - Hierarchy Relationship](../../Wiki/HelmHierarchyRelationship.png)
+[Mojaloop Helm - Hierarchy Relationship](../../Wiki/HelmHierarchyRelationship.png)
 
 #### Helm Hierarchy of Values
-![Mojaloop Hierarchy of Values](../../Wiki/Mojaloop Hierarchy of Values.png)
+![Mojaloop Helm - Hierarchy of Values](../../Wiki/HelmHierarchyValues.png)
+[Mojaloop Helm - Hierarchy of Values](../../Wiki/HelmHierarchyValues.png
