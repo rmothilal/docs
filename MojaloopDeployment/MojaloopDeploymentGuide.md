@@ -39,9 +39,9 @@ This provides environment resource recommendations with a view of the infrastruc
       - 4x vCPUs, 16GB of RAM, and 40gb storage
       
   *Note that this would also depend on your underlaying infrastructure, and it does NOT include requirements for persistent volumes/storage.
-  ![Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArchitecture.png)
+  ![Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.png)
   
-  [Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArchitecture.png)
+  [Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.html)
 
 
 ### 1.2 Local Deployment and Testing Tools

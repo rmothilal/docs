@@ -14,7 +14,7 @@ Helm Github: http://github.com/mojaloop/helm  <- Location for source and values.
 
 #### Helm Hierarchy Relationship
 ![Mojaloop Helm - Hierarchy Relationship](../../Wiki/HelmHierarchyRelationship.png)
-[Mojaloop Helm - Hierarchy Relationship](../../Wiki/HelmHierarchyRelationship.png)
+[Mojaloop Helm - Hierarchy Relationship](../../Wiki/HelmHierarchyRelationship.html)
 
 #### Helm Hierarchy of Values
 ![Mojaloop Helm - Hierarchy of Values](../../Wiki/HelmHierarchyValues.png)
