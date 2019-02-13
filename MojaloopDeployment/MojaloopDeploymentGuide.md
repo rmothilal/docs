@@ -13,7 +13,7 @@ This document will provide guidelines to deploy and configure the Mojaloop appli
   * [Postman](#postman)
     * [Installing Postman](#231-installing-postman)
     * [Setup Postman](#231-setup-postman)
-  * [Errors During Setup]()
+* [Errors During Setup]()
 
 ## 1 Software List 
 Before proceeding, please have a look at [Deployment Recommedations](#deployment-recommedations) to insure the minimum resource requirements are availlable.
