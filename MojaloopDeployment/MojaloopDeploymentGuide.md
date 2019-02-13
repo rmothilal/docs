@@ -21,7 +21,7 @@ Before proceeding, please have a look at [Deployment Recommedations](#deployment
 ### 1.1 Deployment Recommendations
 This provides environment resource recommendations with a view of the infrastructure architecture.
 
-#####Resources Requirements:
+##### Resources Requirements:
 - Control Plane (i.e. Master Node)
    ```http request
    https://kubernetes.io/docs/setup/cluster-large/#size-of-master-and-master-components
@@ -39,9 +39,10 @@ This provides environment resource recommendations with a view of the infrastruc
       - 4x vCPUs, 16GB of RAM, and 40gb storage
       
   *Note that this would also depend on your underlaying infrastructure, and it does NOT include requirements for persistent volumes/storage.
-  ![Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.png)
   
-  [Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.html)
+  ![Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.svg)
+  
+  [Mojaloop Deployment Recommendations - Infrastructure Architecture](../Wiki/KubeInfrastructureArch.svg)
 
 
 ### 1.2 Local Deployment and Testing Tools
@@ -82,7 +83,9 @@ To install Kubernetes with Docker, follow the steps below;
      - Increase the Memory allocation to at least 8.0 GiB
 
 ![Kubernetes Install with Docker 1](../Wiki/KubernetesInstallWithDocker-1.png)
+
 [Kubernetes Install with Docker 1](../Wiki/KubernetesInstallWithDocker-1.png)
+
    - Go to **Kubernetes**
      - Select **Enable Kubernetes** tick box
      - Make sure **Kubernetes** is selected
@@ -91,6 +94,7 @@ To install Kubernetes with Docker, follow the steps below;
  - The option is available to wait for completion or run as a background task.
 
 ![Kubernetes Install with Docker 2](../Wiki/KubernetesInstallWithDocker-2.png)
+
 [Kubernetes Install with Docker 2](../Wiki/KubernetesInstallWithDocker-2.png)
 
 #### 2.1.2 Kubernetes environment setup:
@@ -112,7 +116,7 @@ The following are all command line executables specifically for Mac.
    kubectx docker-for-desktop
    ```
 1. Install Kubernetes Dashboard roles, services & deployment. (Alternative install for Dashboard using Helm: [kubernetes-dashboard](https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard))
-   ___
+
    **IMPORTANT:**  Always verify current [kubernetes-dashboard](https://github.com/kubernetes/dashboard) yaml file for the below create command.
    ```bash
    kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
@@ -140,10 +144,12 @@ The following are all command line executables specifically for Mac.
    kubectl -n kube-system describe secrets/kubernetes-dashboard-token-btbwf
    ```
    The __{kubernetes-dashboard-token-btbwf}__ is retrieved from the output in the previous step.
-   ___
    For more information on generating the token, follow the __Authentication__ link in the window.
-  ![kubernetes-dashboard](../Wiki/kubernetesDashboard.png)
-  [kubernetes-dashboard](../Wiki/kubernetesDashboard.png)
+   
+   ![kubernetes-dashboard](../Wiki/kubernetesDashboard.png)
+
+   [kubernetes-dashboard](../Wiki/kubernetesDashboard.png)
+
 1. Config Helm CLI and install Helm Tiller on K8s cluster
    ```bash
    helm init
@@ -156,6 +162,11 @@ The following are all command line executables specifically for Mac.
    ```bash
    helm repo add mojaloop http://mojaloop.io/helm/repo/
    ```
+1. Add the incubator. This is needed to resolve Helm Chart dependencies required by Mojaloop charts
+   ```bash
+   helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator
+   ```
+
 1. Update helm repositories
    ```bash
    helm repro update
@@ -232,7 +243,7 @@ Postman is used to send requests and receive responses.
 Please, follow these instructions: [Get Postman](https://www.getpostman.com/postman)
 
 Alternatively on **Ubuntu** you may run:
-```text
+```bash
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
 rm postman.tar.gz
