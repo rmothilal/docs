@@ -1,22 +1,22 @@
 # Deployment and Setup Introduction
 This document will provide guidelines to deploy and configure the Mojaloop applications on a local environment, utilizing Kubernetes within Docker.
 
-* [Software List](#software-list)
-  * [Deployment Recommendations](#deployment-recommendations)
-  * [Local Deployment and Testing Tools](#local-deployment-and-testing-tools)
-* [Deployment](#deployment)
-  * [Kubernetes](#kubernetes)
-    * [Kubernetes Installation with Docker](#kubernetes-installation-with-docker)
-    * [Kubernetes environment setup](#kubernetes-environment-setup)
-  * [Helm](#helm)
-    * [Helm Chart Installation](#helm-chart-installation)
-  * [Postman](#postman)
+* [Software List](#1-software-list)
+  * [Deployment Recommendations](#11-deployment-recommendations)
+  * [Local Deployment and Testing Tools](#12-local-deployment-and-testing-tools)
+* [Deployment](#2-deployment)
+  * [Kubernetes](#21-kubernetes)
+    * [Kubernetes Installation with Docker](#211-kubernetes-installation-with-docker)
+    * [Kubernetes environment setup](#212-kubernetes-environment-setup)
+  * [Helm](#22-helm)
+    * [Helm Chart Installation](#221-helm-chart-installation)
+  * [Postman](#23-postman)
     * [Installing Postman](#231-installing-postman)
     * [Setup Postman](#231-setup-postman)
-* [Errors During Setup]()
+* [Errors During Setup](#24-errors-on-setup)
 
 ## 1 Software List 
-Before proceeding, please have a look at [Deployment Recommedations](#deployment-recommedations) to insure the minimum resource requirements are availlable.
+Before proceeding, please have a look at [Deployment Recommedations](#11-deployment-recommendations) to insure the minimum resource requirements are availlable.
 
 ### 1.1 Deployment Recommendations
 This provides environment resource recommendations with a view of the infrastructure architecture.
@@ -268,5 +268,5 @@ sudo ln -s /opt/Postman/Postman /usr/bin/postman
      ```bash
      helm list
      ```
-     If the helm charts are not listed, see the [Helm Chart Installation](#helm-chart-installation) section to install a chart.
+     If the helm charts are not listed, see the [Helm Chart Installation](#221-helm-chart-installation) section to install a chart.
 ___
