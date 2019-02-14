@@ -53,6 +53,7 @@ The tool set to be deployed as part of the deployment process.
 |Docker|Required|<ul><li>Docker Engine and CLI Client</li><li>Local Kubernetes single node cluster</li></ul>|<ul><li>[https://docs.docker.com/install](https://docs.docker.com/install)</li></ul>|
 |Kubectl|Required|<ul><li>Kubernetes CLI for Kubernetes Management</li><li>Note Docker installs this part of Kubernetes install</li></ul>|<ul><li>[https://kubernetes.io/doc/tasks/tools/install-kuberctl](https://kubernetes.io/doc/tasks/tools/install-kuberctl)</li><li>Docker Kubernetes Install (as per this guide)</li><li>Mac: brew install kubernetes-cli</li></ul>|
 |Kubectx|Optional(useful tool)|<ul><li>Kubernetes CLI for Kubernetes Context Management Helper</li><li>Note Docker insgtalls this as part of Kubernetes install</li></ul>|<ul><li>[https://github.com/ahmetb/kubectx](https://github.com/ahmetb/kubectx)</li><li>Mac: brew install kubectx</li></ul>|
+|Kubetail|Optional(useful tool)|<ul><li>* Bash script that enables you to aggregate (tail/follow) logs from multiple pods into one stream. This is the same as running `kubectl logs -f` but for multiple pods.</li><li>* Example usage `kubetail moja.* -n demo`</li></ul>|<ul><li>https://github.com/johanhaleby/kubetail</li></ul>|
 |Helm|Required|<ul><li>Helm helps you manage Kubernetes applications</li><li>Helm charts help you define, install and upgrade even the most complex Kubernetes application</li></ul>|<ul><li>[https://docs.helm.sh/using_helm/#installing-helm](https://docs.helm.sh/using_helm/#installing-helm)</li><li>Mac: brew install kubernetes-helm</li></ul>|
 |Postman|Required|<ul><li>Postman is a Google Chrome application for the interacting with HTTP API's. It presents you with a friendly GUI for the construction requests and reading responces.</li></ul>|<ul><li>[https://www.getpostman.com/apps](https://www.getpostman.com/apps)</li></ul>|
 
@@ -204,36 +205,37 @@ This section will provide guidelines to delete, list, install and upgrade of the
 
 1. If you would like to **delete** a deployed helm chart
    ```bash
-   helm del --purge pi3
+   helm del --purge moja
    ```
-   __Note:__ for demo purposes we are using __pi3__ as the chart __name__. Please verify and use the correct chart name from the listing above.
+   __Note:__ for demo purposes we are using __moja__ as the chart __name__. Please verify and use the correct chart name from the listing above.
 		
 1. To **install** Mojaloop chart(s)
    
    To install the full mojaloop project
    ```bash
-   helm install --namespace=demo --name=pi3 mojaloop/mojaloop
+   helm install --namespace=demo --name=moja mojaloop/mojaloop
    ```
    Alternative directly from the repository: 
    ```bash
-   helm install --namespace=demo --name=pi3 --repo=http://mojaloop.io/helm/repo mojaloop
+   helm install --namespace=demo --name=moja --repo=http://mojaloop.io/helm/repo mojaloop
    ```
 
    __or__ install a specific mojaloop chart eg. Central-ledger
    ```bash
-   helm install --namespace=demo --name=pi3 mojaloop/centralledger
+   helm install --namespace=demo --name=moja mojaloop/centralledger
    ```
    Alternative directly from the repository: 
    ```bash
-   helm install --namespace=demo --name=pi3 --repo=http://mojaloop.io/helm/repo centralledger
+   helm install --namespace=demo --name=moja --repo=http://mojaloop.io/helm/repo centralledger
    ```
 1. To upgrade Mojaloop chart(s)
+   Note: 'v5.1.1' is an example value. 
    ```bash
-   helm upgrade pi3 --set central.centralledger.centralledger-services.containers.api.image.tag=v5.1.1-snapshot mojaloop
+   helm upgrade moja --set central.centralledger.centralledger-services.containers.api.image.tag=v5.1.1-snapshot mojaloop
    ```
 1. To upgrade a specific chart eg. Central-ledger	     
    ```bash
-   helm upgrade pi3 --set centralledger-services.containers.api.image.tag=v5.1.1-snapshot mojaloop/centralledger
+   helm upgrade moja --set centralledger-services.containers.api.image.tag=v5.1.1-snapshot mojaloop/centralledger
    ```
 
 ### 2.3 Postman
