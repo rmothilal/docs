@@ -1,3 +1,5 @@
+# NOTE: This document has moved to the /documentation repo.  Please update that one instead.
+
 # Deployment and Setup Introduction
 This document will provide guidelines to deploy and configure the Mojaloop applications on a local environment, utilizing Kubernetes within Docker.
 
